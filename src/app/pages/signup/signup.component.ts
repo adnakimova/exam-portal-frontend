@@ -1,6 +1,7 @@
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-signup',
@@ -27,16 +28,13 @@ export class SignupComponent implements OnInit {
     console.log(this.user);
     if(this.user.userName=='' || this.user.userName==null){
       //alert("User is required!!");
-      this.snack.open("Username is required!", '',{duration:3000,
-      verticalPosition: 'top',
-      horizontalPosition: 'right'
-    })
+      Swal.fire('Error','Username is required!','error')
       return;
     }
     //addUser: userService
     this.userService.addUser(this.user).subscribe(
         (data)=>{
-          alert("success")
+          Swal.fire('Succes','User is registered successfully!','success')
         },
         (error)=>{
           console.log("error")

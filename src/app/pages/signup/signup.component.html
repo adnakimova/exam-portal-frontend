@@ -7,8 +7,9 @@
                     <form (ngSubmit) = "formSubmit()">
                         <!--Username field-->
                         <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Username*</mat-label>
+                            <mat-label>Username</mat-label>
                             <input 
+                            required
                             [(ngModel)] = "user.userName"
                             name = "userName"
                             matInput placeholder="Enter">
@@ -17,8 +18,9 @@
 
                         <!--Password field-->
                           <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Password*</mat-label>
+                            <mat-label>Password</mat-label>
                             <input
+                            required
                             [(ngModel)] = "user.password"
                             name = "password" 
                             type="password" matInput placeholder="Enter">
@@ -27,8 +29,9 @@
 
                           <!--First Name field-->
                           <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>First Name*</mat-label>
+                            <mat-label>First Name</mat-label>
                             <input 
+                            required
                             [(ngModel)] = "user.firstName"
                             name = "firstName"
                              matInput placeholder="Enter">
@@ -36,8 +39,9 @@
 
                           <!--Last Name field-->
                           <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Last Name*</mat-label>
+                            <mat-label>Last Name</mat-label>
                             <input 
+                            required
                             [(ngModel)] = "user.lastName"
                             name = "lastName"
                              matInput placeholder="Enter">
@@ -45,8 +49,9 @@
 
                           <!--Email field-->
                           <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Email*</mat-label>
+                            <mat-label>Email</mat-label>
                             <input 
+                            required
                             [(ngModel)] = "user.email"
                             name = "enail"
                              matInput placeholder="Enter">
@@ -54,13 +59,14 @@
 
                           <!--Phone Number field-->
                           <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Phone*</mat-label>
+                            <mat-label>Phone</mat-label>
                             <input 
+                            required
                             [(ngModel)] = "user.phone"
                             name = "phone"
                              matInput placeholder="Enter">
                           </mat-form-field>
-                          
+
                           <div class="container text-center">
                             <button type="submit" mat-raised-button color="primary">Sign Up</button>
                             <button style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
