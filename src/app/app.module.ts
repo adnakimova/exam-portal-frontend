@@ -16,6 +16,8 @@ import{HttpClientModule} from'@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { HomeComponent } from './pages/home/home.component';
+import{MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import {MatIconModule} from '@angular/material/icon';
     NavbarComponent,
     FooterComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatSnackBarModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
 
     
   ],
