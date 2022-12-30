@@ -18,6 +18,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './pages/home/home.component';
 import{MatCardModule} from '@angular/material/card';
+import { authInterceptorProviders } from './services/auth.interceptor';
 
 
 @NgModule({
@@ -45,7 +46,7 @@ import{MatCardModule} from '@angular/material/card';
 
     
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

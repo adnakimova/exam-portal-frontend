@@ -13,12 +13,10 @@ export class SignupComponent implements OnInit {
   constructor(private userService: UserService, private snack:MatSnackBar) { }
 
   public user = {
-    userName: '',
-    password: '',
-    firstName: '',
-    lastName: '',
+    full_name: '',
     email: '',
     phone: '',
+    password: ''
   };
   ngOnInit(): void {
 
@@ -26,7 +24,7 @@ export class SignupComponent implements OnInit {
 
   formSubmit() {
     console.log(this.user);
-    if(this.user.userName=='' || this.user.userName==null){
+    if(this.user.email=='' || this.user.email==null){
       //alert("User is required!!");
       Swal.fire('Error','Username is required!','error')
       return;

@@ -9,11 +9,15 @@
           </div>
 
                 <h1 class = "text-center"><p class="p1">Sign In</p></h1>
+
+                {{loginData|json}}
               <mat-card-content>
-                <form action="" class="row ml40">
+                <form (ngSubmit) = "formSubmit()" class="row ml40">
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Username</mat-label>
                     <input 
+                    [(ngModel)] = "loginData.email"
+                    name = "email"
                     required
                     matInput placeholder="Enter">
                     <mat-hint>Valid username</mat-hint>
@@ -21,7 +25,10 @@
 
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input type="password"
+                    <input
+                    [(ngModel)] ="loginData.password"
+                    name="password"
+                    type="password"
                     required
                     matInput placeholder="Enter">
                   </mat-form-field>

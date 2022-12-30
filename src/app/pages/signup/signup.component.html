@@ -9,66 +9,46 @@
 
                 <mat-card-content>
                     <form (ngSubmit) = "formSubmit()">
-                        <!--Username field-->
+                        <!--FullName field-->
                         <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Username</mat-label>
+                            <mat-label>Full Name</mat-label>
                             <input 
                             required
-                            [(ngModel)] = "user.userName"
-                            name = "userName"
+                            [(ngModel)] = "user.full_name"
+                            name = "full_name"
                             matInput placeholder="Enter">
-                            <mat-hint>Username must be unique!</mat-hint>
-                          </mat-form-field>
-
-                        <!--Password field-->
-                          <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Password</mat-label>
-                            <input
-                            required
-                            [(ngModel)] = "user.password"
-                            name = "password" 
-                            type="password" matInput placeholder="Enter">
                             
                           </mat-form-field>
 
-                          <!--First Name field-->
-                          <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>First Name</mat-label>
-                            <input 
-                            required
-                            [(ngModel)] = "user.firstName"
-                            name = "firstName"
-                             matInput placeholder="Enter">
-                          </mat-form-field>
-
-                          <!--Last Name field-->
-                          <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Last Name</mat-label>
-                            <input 
-                            required
-                            [(ngModel)] = "user.lastName"
-                            name = "lastName"
-                             matInput placeholder="Enter">
-                          </mat-form-field>
-
-                          <!--Email field-->
+                        <!--Email field-->
                           <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Email</mat-label>
-                            <input 
+                            <input
                             required
                             [(ngModel)] = "user.email"
-                            name = "enail"
-                             matInput placeholder="Enter">
+                            name = "email" 
+                            matInput placeholder="Enter">
+                            <mat-hint>Email must be unique!</mat-hint>
                           </mat-form-field>
 
-                          <!--Phone Number field-->
-                          <mat-form-field class="full-width" appearance="outline">
+                           <!--Phone field-->
+                           <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Phone</mat-label>
                             <input 
                             required
                             [(ngModel)] = "user.phone"
                             name = "phone"
                              matInput placeholder="Enter">
+                          </mat-form-field>
+
+                          <!--Password field-->
+                          <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input 
+                            required
+                            [(ngModel)] = "user.password"
+                            name = "password"
+                            type="password" matInput placeholder="Enter">
                           </mat-form-field>
 
                           <div class="container text-center">
