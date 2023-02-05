@@ -34,6 +34,7 @@ export class LoginService {
 
     public logout(){
       localStorage.removeItem('token')
+      console.log("logged out")
       return true;
     }
 

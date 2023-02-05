@@ -1,11 +1,13 @@
 <div class = "bootstrap-wrapper">
     <div class = "container">
-        <div class="row" style="margin-top: 150px;">
-            <div class="col-md-6 offset-md-3">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-md-6 offset-md-3 container text-center">
 
               <mat-card>
-                <div class="container text-center"><img src="../../../assets/logo.png"></div>
-                <h1 class = "text-center"><p class="p1">Sign Up</p></h1>
+                
+                <p class = "text-center bolded" style="margin-top: 50px; margin-bottom: 20px;">Sign up in seconds</p>
+
+                <a class = "text-center" style = "margin-bottom: 20px;">Use your email or other service to continue working with Exam Portal</a>
 
                 <mat-card-content>
                     <form (ngSubmit) = "formSubmit()">
@@ -28,7 +30,6 @@
                             [(ngModel)] = "user.email"
                             name = "email" 
                             matInput placeholder="Enter">
-                            <mat-hint>Email must be unique!</mat-hint>
                           </mat-form-field>
 
                            <!--Phone field-->
@@ -52,8 +53,9 @@
                           </mat-form-field>
 
                           <div class="container text-center">
-                            <button type="submit" mat-raised-button color="primary">Sign Up</button>
-                            <button style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+                            <button mat-raised-button color="primary" class="my-class"
+                            >Sign up</button>
+                            
                           </div>
                           
                     </form>

@@ -1,7 +1,7 @@
 import { LoginService } from './../../services/login.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,12 +14,12 @@ export class LoginComponent {
     password:'',
   }
 
-  constructor(private snack:MatSnackBar, private login:LoginService){}
+  constructor(private snack:MatSnackBar, private login:LoginService,private router:Router){}
 
   ngOnInit():void{}
 
   formSubmit(){
-    console.log("login button clicked")
+   
 
     if(this.loginData.email.trim()=='' || this.loginData.password == null){
         this.snack.open("Username is required","",{
@@ -42,6 +42,9 @@ export class LoginComponent {
           (user:any)=>{
             this.login.setUser(user);
             console.log(user)
+            //redirect to normal user page
+            // window.location.href = '/user-dashboard'
+            this.router.navigate(['user-dashboard'])
           }
         )
 
@@ -50,6 +53,10 @@ export class LoginComponent {
       (error:any)=>{
         console.log('Error!');
         console.log(error);
+        this.login.logout;
+        this.snack.open("Invalid details! Try again!",'',{
+          duration: 3000
+        })
       }
       );
   }

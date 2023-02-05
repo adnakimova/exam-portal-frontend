@@ -19,6 +19,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './pages/home/home.component';
 import{MatCardModule} from '@angular/material/card';
 import { authInterceptorProviders } from './services/auth.interceptor';
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { UserGuard } from './services/user.guard';
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { authInterceptorProviders } from './services/auth.interceptor';
     FooterComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 
     
   ],
-  providers: [authInterceptorProviders],
+  providers: [authInterceptorProviders,UserGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

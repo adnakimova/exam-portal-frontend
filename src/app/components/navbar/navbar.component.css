@@ -1,3 +1,20 @@
 .example-spacer{
     flex: 1 1 auto;
 }
+
+p {
+    font: 20px/14px sans-serif;
+  }
+a {
+    font: 16px/14px sans-serif;
+  }
+  .my-class{
+    width: 200px!important;
+    min-width: unset!important;
+}
+
+  .bolded { font-weight: bold; }
+
+
+ 
+  

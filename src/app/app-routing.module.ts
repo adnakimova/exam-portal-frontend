@@ -3,6 +3,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import {UserGuard } from './services/user.guard';
 
 const routes: Routes = [
   {
@@ -19,6 +21,12 @@ const routes: Routes = [
     path:'login',
     component:LoginComponent,
     pathMatch:'full'
+  },
+  {
+    path:'user-dashboard',
+    component:UserDashboardComponent,
+    pathMatch:'full',
+    canActivate: [UserGuard]
   }
 ];
 
